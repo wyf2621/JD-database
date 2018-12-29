@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-12-29 21:51:10 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="db.entity.Advertise" table="advertise">
+        <id name="ad_id" type="int">
+            <column name="ad_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="ad_location" type="java.lang.String">
+            <column name="ad_location" />
+        </property>
+        <property name="ad_channel" type="java.lang.String">
+            <column name="ad_channel" />
+        </property>
+        <property name="ad_name" type="java.lang.String">
+            <column name="ad_name" />
+        </property>
+        <property name="ad_detail" type="java.lang.String">
+            <column name="ad_detail" />
+        </property>
+        <property name="ad_type" type="java.lang.String">
+            <column name="ad_type" />
+        </property>
+        <property name="ad_media_width" type="float">
+            <column name="ad_media_width" />
+        </property>
+        <property name="ad_media_height" type="float">
+            <column name="ad_media_height" />
+        </property>
+        <property name="ad_media_type" type="java.lang.String">
+            <column name="ad_media_type" />
+        </property>
+        <property name="ad_media_size" type="float">
+            <column name="ad_media_size" />
+        </property>
+        <property name="ad_create_time" type="java.lang.String">
+            <column name="ad_create_time" />
+        </property>
+        <property name="ad_update_time" type="java.lang.String">
+            <column name="ad_update_time" />
+        </property>
+    </class>
+</hibernate-mapping>

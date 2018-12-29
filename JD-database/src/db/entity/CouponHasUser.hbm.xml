@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-12-29 21:51:10 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="db.entity.CouponHasUser" table="coupon_has_user">
+        <id name="user_user_id" type="int">
+            <column name="user_user_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="coupon_coupon_id" type="int">
+            <column name="coupon_coupon_id" />
+        </property>
+        <property name="received_time" type="java.lang.String">
+            <column name="received_time" />
+        </property>
+        <property name="coupon_has_user_is_deleted" type="boolean">
+            <column name="coupon_has_user_is_deleted" />
+        </property>
+        <property name="coupon_has_user_status" type="int">
+            <column name="coupon_has_user_status" />
+        </property>
+    </class>
+</hibernate-mapping>

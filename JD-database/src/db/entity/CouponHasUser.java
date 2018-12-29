@@ -1,6 +1,6 @@
 package db.entity;
 
-public class ConponHasUser {
+public class CouponHasUser {
 
 	private int coupon_coupon_id;
 	private int user_user_id;

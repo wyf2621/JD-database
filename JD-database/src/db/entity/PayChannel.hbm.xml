@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-12-29 21:51:10 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="db.entity.PayChannel" table="pay_channel">
+        <id name="user_user_id" type="int">
+            <column name="user_user_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="pay_cahnnel_id" type="int">
+            <column name="pay_cahnnel_id" />
+        </property>
+        <property name="pay_cahnnel_type" type="int">
+            <column name="pay_cahnnel_type" />
+        </property>
+        <property name="pay_cahnnel_type_no" type="java.lang.String">
+            <column name="pay_cahnnel_type_no" />
+        </property>
+    </class>
+</hibernate-mapping>

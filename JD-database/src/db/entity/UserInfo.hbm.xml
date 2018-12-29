@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-12-29 21:51:10 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="db.entity.UserInfo" table="user_info">
+        <id name="user_info_id" type="int">
+            <column name="user_info_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="user_info_realname" type="java.lang.String">
+            <column name="user_info_realname" />
+        </property>
+        <property name="user_info_sex" type="java.lang.String">
+            <column name="user_info_sex" />
+        </property>
+        <property name="user_info_pid" type="java.lang.String">
+            <column name="user_info_pid" />
+        </property>
+        <property name="user_info_birth" type="java.lang.String">
+            <column name="user_info_birth" />
+        </property>
+        <property name="user_info_face_url" type="java.lang.String">
+            <column name="user_info_face_url" />
+        </property>
+        <property name="user_info_level" type="java.lang.String">
+            <column name="user_info_level" />
+        </property>
+        <property name="user_info_cost" type="float">
+            <column name="USER_INFO_COST" />
+        </property>
+        <property name="user_info_return_credit" type="java.lang.String">
+            <column name="user_info_return_credit" />
+        </property>
+        <property name="user_info_regist_time" type="java.lang.String">
+            <column name="user_info_regist_time" />
+        </property>
+        <property name="user_info_login_count" type="int">
+            <column name="user_info_login_count" />
+        </property>
+        <property name="user_user_id" type="int">
+            <column name="user_user_id" />
+        </property>
+    </class>
+</hibernate-mapping>

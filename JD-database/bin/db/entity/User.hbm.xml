@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-12-29 21:51:10 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="db.entity.User" table="user">
+        <id name="user_id" type="int">
+            <column name="user_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="user_username" type="java.lang.String">
+            <column name="user_username" />
+        </property>
+        <property name="user_email" type="java.lang.String">
+            <column name="user_email" />
+        </property>
+        <property name="user_tel" type="java.lang.String">
+            <column name="user_tel" />
+        </property>
+        <property name="user_password" type="java.lang.String">
+            <column name="user_password" />
+        </property>
+        <property name="user_status" type="int">
+            <column name="user_status" />
+        </property>
+    </class>
+</hibernate-mapping>

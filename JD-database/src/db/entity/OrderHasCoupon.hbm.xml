@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-12-29 21:51:10 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="db.entity.OrderHasCoupon" table="order_has_coupon">
+        <id name="order_order_id" type="int">
+            <column name="order_order_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="coupon_coupon_id" type="int">
+            <column name="coupon_coupon_id" />
+        </property>
+    </class>
+</hibernate-mapping>

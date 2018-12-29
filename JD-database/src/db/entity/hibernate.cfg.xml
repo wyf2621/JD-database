@@ -13,4 +13,37 @@
 		  <property name="hibernate.show_sql">true</property>
 		  <property name="hibernate.format_sql">true</property>
     </session-factory>
+    
+    <mapping resource="db/entity/Addr.hbm.xml"/>
+    <mapping resource="db/entity/Advertise.hbm.xml"/>
+    <mapping resource="db/entity/AdvertiseInfo.hbm.xml"/>
+    <mapping resource="db/entity/Attr.hbm.xml"/>
+    <mapping resource="db/entity/AttrValue.hbm.xml"/>
+    <mapping resource="db/entity/AttrValueHasSku.hbm.xml"/>
+    <mapping resource="db/entity/Brand.hbm.xml"/>
+    <mapping resource="db/entity/Coupon.hbm.xml"/>
+    <mapping resource="db/entity/CouponHasUser.hbm.xml"/>
+    <mapping resource="db/entity/CouponUserRange.hbm.xml"/>
+    <mapping resource="db/entity/Order.hbm.xml"/>
+    <mapping resource="db/entity/OrderHasCoupon.hbm.xml"/>
+    <mapping resource="db/entity/PayChannel.hbm.xml"/>
+    <mapping resource="db/entity/Return.hbm.xml"/>
+    <mapping resource="db/entity/ReturnAddr.hbm.xml"/>
+    <mapping resource="db/entity/ShoppingCartHasSku.hbm.xml"/>
+    <mapping resource="db/entity/Sku.hbm.xml"/>
+    <mapping resource="db/entity/SkuHasOrder.hbm.xml"/>
+    <mapping resource="db/entity/SkuHasReturn.hbm.xml"/>
+    <mapping resource="db/entity/Spec.hbm.xml"/>
+    <mapping resource="db/entity/SpecGroup.hbm.xml"/>
+    <mapping resource="db/entity/SpecHasSku.hbm.xml"/>
+    <mapping resource="db/entity/Spu.hbm.xml"/>
+    <mapping resource="db/entity/SpuHasSpec.hbm.xml"/>
+    <mapping resource="db/entity/SpuType.hbm.xml"/>   
+    <mapping resource="db/entity/SpuTypeHasStoreGroup.hbm.xml"/>
+    <mapping resource="db/entity/SpuTypeHasStoreInfo.hbm.xml"/>
+    <mapping resource="db/entity/Store.hbm.xml"/>
+    <mapping resource="db/entity/User.hbm.xml"/>
+    <mapping resource="db/entity/UserInfo.hbm.xml"/>
+    <mapping resource="db/entity/UserLoginOpen.hbm.xml"/>
+    
 </hibernate-configuration>

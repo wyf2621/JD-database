@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-12-29 21:51:10 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="db.entity.Sku" table="sku">
+        <id name="sku_id" type="int">
+            <column name="sku_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="sku_name" type="java.lang.String">
+            <column name="sku_name" />
+        </property>
+        <property name="sku_sku_id" type="int">
+            <column name="sku_sku_id" />
+        </property>
+    </class>
+</hibernate-mapping>

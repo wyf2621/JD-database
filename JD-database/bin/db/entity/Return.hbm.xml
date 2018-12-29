@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-12-29 21:51:10 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="db.entity.Return" table="return">
+        <id name="return_id" type="int">
+            <column name="return_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="return_no" type="int">
+            <column name="return_no" />
+        </property>
+        <property name="return_delivery_no" type="java.lang.String">
+            <column name="return_delivery_no" />
+        </property>
+        <property name="return_amout" type="int">
+            <column name="return_amout" />
+        </property>
+        <property name="return_status" type="int">
+            <column name="return_status" />
+        </property>
+        <property name="return_apply_time" type="java.lang.String">
+            <column name="return_apply_time" />
+        </property>
+        <property name="return_start_time" type="java.lang.String">
+            <column name="return_start_time" />
+        </property>
+        <property name="return_end_time" type="java.lang.String">
+            <column name="return_end_time" />
+        </property>
+        <property name="return_reason" type="java.lang.String">
+            <column name="return_reason" />
+        </property>
+        <property name="return_note" type="java.lang.String">
+            <column name="return_note" />
+        </property>
+        <property name="order_order_id" type="int">
+            <column name="order_order_id" />
+        </property>
+        <property name="user_user_id" type="int">
+            <column name="user_user_id" />
+        </property>
+    </class>
+</hibernate-mapping>

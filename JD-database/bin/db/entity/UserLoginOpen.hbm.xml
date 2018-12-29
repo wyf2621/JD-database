@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-12-29 21:51:10 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="db.entity.UserLoginOpen" table="user_login_open">
+        <id name="user_user_id" type="int">
+            <column name="user_user_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="user_login_open_id" type="int">
+            <column name="user_login_open_id" />
+        </property>
+        <property name="user_login_open_qq_no" type="java.lang.String">
+            <column name="user_login_open_qq_no" />
+        </property>
+        <property name="user_login_open_wechat_no" type="java.lang.String">
+            <column name="user_login_open_wechat_no" />
+        </property>
+    </class>
+</hibernate-mapping>

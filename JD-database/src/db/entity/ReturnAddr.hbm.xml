@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-12-29 21:51:10 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="db.entity.ReturnAddr" table="return_addr">
+        <id name="return_addr_id" type="int">
+            <column name="return_addr_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="return_addr_country" type="java.lang.String">
+            <column name="return_addr_country" />
+        </property>
+        <property name="return_addr_city" type="java.lang.String">
+            <column name="return_addr_city" />
+        </property>
+        <property name="return_addr_area" type="java.lang.String">
+            <column name="return_addr_area" />
+        </property>
+        <property name="return_addr_detail" type="java.lang.String">
+            <column name="return_addr_detail" />
+        </property>
+        <property name="return_addr_is_default" type="boolean">
+            <column name="return_addr_is_default" />
+        </property>
+        <property name="return_addr_name" type="java.lang.String">
+            <column name="return_addr_name" />
+        </property>
+        <property name="return_addr_tel" type="java.lang.String">
+            <column name="return_addr_tel" />
+        </property>
+        <property name="store_store_id" type="int">
+            <column name="store_store_id" />
+        </property>
+    </class>
+</hibernate-mapping>

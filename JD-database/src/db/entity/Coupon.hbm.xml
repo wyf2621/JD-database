@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-12-29 21:51:10 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="db.entity.Coupon" table="COUPON">
+        <id name="coupon_id" type="int">
+            <column name="COUPON_ID" />
+            <generator class="assigned" />
+        </id>
+        <property name="coupon_name" type="java.lang.String">
+            <column name="COUPON_NAME" />
+        </property>
+        <property name="coupon_how_many" type="int">
+            <column name="COUPON_HOW_MANY" />
+        </property>
+        <property name="coupon_lower_bound" type="float">
+            <column name="COUPON_LOWER_BOUND" />
+        </property>
+        <property name="coupon_value" type="float">
+            <column name="COUPON_VALUE" />
+        </property>
+        <property name="coupon_cost_allocation" type="int">
+            <column name="COUPON_COST_ALLOCATION" />
+        </property>
+        <property name="coupon_user_lever" type="java.lang.String">
+            <column name="COUPON_USER_LEVER" />
+        </property>
+        <property name="coupon_user_range" type="int">
+            <column name="COUPON_USER_RANGE" />
+        </property>
+        <property name="coupon_begin_time" type="java.lang.String">
+            <column name="COUPON_BEGIN_TIME" />
+        </property>
+        <property name="coupon_end_time" type="java.lang.String">
+            <column name="COUPON_END_TIME" />
+        </property>
+        <property name="coupon_status" type="int">
+            <column name="COUPON_STATUS" />
+        </property>
+        <property name="coupon_verifier" type="java.lang.String">
+            <column name="COUPON_VERIFIER" />
+        </property>
+        <property name="coupon_is_deleted" type="boolean">
+            <column name="COUPON_IS_DELETED" />
+        </property>
+        <property name="coupon_note" type="java.lang.String">
+            <column name="COUPON_NOTE" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-12-29 21:51:10 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="db.entity.Store" table="store">
+        <id name="store_id" type="int">
+            <column name="store_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="store_name" type="java.lang.String">
+            <column name="store_name" />
+        </property>
+        <property name="store_keyword" type="java.lang.String">
+            <column name="store_keyword" />
+        </property>
+        <property name="store_tel" type="java.lang.String">
+            <column name="store_tel" />
+        </property>
+        <property name="store_is_direct_sale" type="boolean">
+            <column name="store_is_direct_sale" />
+        </property>
+        <property name="store_url" type="java.lang.String">
+            <column name="store_url" />
+        </property>
+        <property name="store_logo_url" type="java.lang.String">
+            <column name="store_logo_url" />
+        </property>
+        <property name="store_license_url" type="java.lang.String">
+            <column name="store_license_url" />
+        </property>
+        <property name="store_introduction" type="java.lang.String">
+            <column name="store_introduction" />
+        </property>
+        <property name="store_status" type="int">
+            <column name="store_status" />
+        </property>
+        <property name="store_create_time" type="java.lang.String">
+            <column name="store_create_time" />
+        </property>
+        <property name="store_pass_time" type="java.lang.String">
+            <column name="store_pass_time" />
+        </property>
+        <property name="store_end_time" type="java.lang.String">
+            <column name="store_end_time" />
+        </property>
+        <property name="store_verifier" type="java.lang.String">
+            <column name="store_verifier" />
+        </property>
+        <property name="user_user_id" type="int">
+            <column name="user_user_id" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-12-29 21:51:10 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="db.entity.SkuHasOrder" table="sku_has_order">
+        <id name="sku_sku_id" type="int">
+            <column name="sku_sku_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="order_order_id" type="int">
+            <column name="order_order_id" />
+        </property>
+        <property name="sku_has_order_sku_num" type="int">
+            <column name="sku_has_order_sku_num" />
+        </property>
+    </class>
+</hibernate-mapping>

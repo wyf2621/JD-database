@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-12-29 22:25:28 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="db.entity.Spec" table="spec">
+        <id name="spec_id" type="int">
+            <column name="spec_id" />
+            <generator class="assigned" />
+        </id>
+        <list name="spec_name" inverse="false" table="spec" lazy="true">
+            <key>
+                <column name="spec_id" />
+            </key>
+            <list-index></list-index>
+            <element type="string">
+                <column name="spec_name" />
+            </element>
+        </list>
+        <property name="spec_group_spec_group_id" type="int">
+            <column name="spec_group_spec_group_id" />
+        </property>
+    </class>
+</hibernate-mapping>

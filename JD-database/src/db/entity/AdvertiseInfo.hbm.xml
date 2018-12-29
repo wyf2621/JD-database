@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-12-29 21:51:10 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="db.entity.AdvertiseInfo" table="advertise_info">
+        <id name="ad_info_id" type="int">
+            <column name="ad_info_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="ad_info_title" type="java.lang.String">
+            <column name="ad_info_title" />
+        </property>
+        <property name="ad_file_path" type="java.lang.String">
+            <column name="ad_file_path" />
+        </property>
+        <property name="ad_file_type" type="java.lang.String">
+            <column name="ad_file_type" />
+        </property>
+        <property name="ad_file_size" type="float">
+            <column name="ad_file_size" />
+        </property>
+        <property name="ad_link_url" type="java.lang.String">
+            <column name="ad_link_url" />
+        </property>
+        <property name="ad_scan_time" type="int">
+            <column name="ad_scan_time" />
+        </property>
+        <property name="ad_click_time" type="int">
+            <column name="ad_click_time" />
+        </property>
+        <property name="ad_is_period" type="boolean">
+            <column name="ad_is_period" />
+        </property>
+        <property name="ad_create_time" type="java.lang.String">
+            <column name="ad_create_time" />
+        </property>
+        <property name="ad_during_time" type="java.lang.String">
+            <column name="ad_during_time" />
+        </property>
+        <property name="ad_begin_time" type="java.lang.String">
+            <column name="ad_begin_time" />
+        </property>
+        <property name="ad_end_time" type="java.lang.String">
+            <column name="ad_end_time" />
+        </property>
+        <property name="ad_info_status" type="int">
+            <column name="ad_info_status" />
+        </property>
+        <property name="ad_note" type="java.lang.String">
+            <column name="ad_note" />
+        </property>
+        <property name="store_store_id" type="int">
+            <column name="store_store_id" />
+        </property>
+        <property name="advertise_ad_id" type="int">
+            <column name="advertise_ad_id" />
+        </property>
+    </class>
+</hibernate-mapping>

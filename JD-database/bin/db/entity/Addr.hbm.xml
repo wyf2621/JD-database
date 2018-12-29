@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-12-29 21:51:10 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="db.entity.Addr" table="addr">
+        <id name="addr_id" type="int">
+            <column name="addr_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="addr_country" type="java.lang.String">
+            <column name="addr_country" />
+        </property>
+        <property name="addr_province" type="java.lang.String">
+            <column name="addr_province" />
+        </property>
+        <property name="addr_city" type="java.lang.String">
+            <column name="addr_city" />
+        </property>
+        <property name="addr_area" type="java.lang.String">
+            <column name="addr_area" />
+        </property>
+        <property name="addr_detail" type="java.lang.String">
+            <column name="addr_detail" />
+        </property>
+        <property name="addr_is_default" type="boolean">
+            <column name="addr_is_default" />
+        </property>
+        <property name="addr_name" type="java.lang.String">
+            <column name="addr_name" />
+        </property>
+        <property name="addr_tel" type="java.lang.String">
+            <column name="addr_tel" />
+        </property>
+        <property name="user_user_id" type="int">
+            <column name="user_user_id" />
+        </property>
+    </class>
+</hibernate-mapping>

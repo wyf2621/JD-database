@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-12-29 21:51:10 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="db.entity.Order" table="order">
+        <id name="order_id" type="int">
+            <column name="order_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="order_no" type="java.lang.String">
+            <column name="order_no" />
+        </property>
+        <property name="order_sku_sum" type="int">
+            <column name="order_sku_sum" />
+        </property>
+        <property name="order_total_price" type="float">
+            <column name="order_total_price" />
+        </property>
+        <property name="order_real_price" type="float">
+            <column name="order_real_price" />
+        </property>
+        <property name="order_delivery_price" type="float">
+            <column name="order_delivery_price" />
+        </property>
+        <property name="order_store_discount" type="float">
+            <column name="order_store_discount"order_time_pay />
+        </property>
+        <property name="order_platform_discount" type="float">
+            <column name="order_platform_discount" />
+        </property>
+        <property name="order_time_order" type="java.lang.String">
+            <column name="order_time_order" />
+        </property>
+        <property name="order_time_pay" type="java.lang.String">
+            <column name="order_time_pay" />
+        </property>
+        <property name="order_time_delivery" type="java.lang.String">
+            <column name="order_time_delivery" />
+        </property>
+        <property name="order_time_deal" type="java.lang.String">
+            <column name="order_time_deal" />
+        </property>
+        <property name="order_delivery_no" type="java.lang.String">
+            <column name="order_delivery_no" />
+        </property>
+        <property name="order_note" type="java.lang.String">
+            <column name="order_note" />
+        </property>
+        <property name="order_status" type="int">
+            <column name="order_status" />
+        </property>
+        <property name="pay_channel_pay_channel_id" type="int">
+            <column name="pay_channel_pay_channel_id" />
+        </property>
+        <property name="user_user_id" type="int">
+            <column name="user_user_id" />
+        </property>
+        <property name="addr_addr_id" type="int">
+            <column name="addr_addr_id" />
+        </property>
+    </class>
+</hibernate-mapping>
