@@ -24,7 +24,7 @@
             <column name="order_delivery_price" />
         </property>
         <property name="order_store_discount" type="float">
-            <column name="order_store_discount"order_time_pay />
+            <column name="order_store_discount" />
         </property>
         <property name="order_platform_discount" type="float">
             <column name="order_platform_discount" />

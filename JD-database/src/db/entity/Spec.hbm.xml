@@ -8,13 +8,13 @@
             <column name="spec_id" />
             <generator class="assigned" />
         </id>
-        <list name="spec_name" inverse="false" table="spec" lazy="true">
+        <list name="spec_name" table="spec_name_table">
             <key>
                 <column name="spec_id" />
             </key>
-            <list-index></list-index>
+            <list-index column="list_order"></list-index>
             <element type="string">
-                <column name="spec_name" />
+                <column name="spec_name_name" />
             </element>
         </list>
         <property name="spec_group_spec_group_id" type="int">

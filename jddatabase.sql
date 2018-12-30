@@ -59,8 +59,7 @@ CREATE TABLE IF NOT EXISTS `jddatabase`.`addr` (
   CONSTRAINT `fk_addr_user1`
     FOREIGN KEY (`user_user_id`)
     REFERENCES `jddatabase`.`user` (`user_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+   ON DELETE CASCADE ON UPDATE CASCADE)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = latin1;
 
@@ -114,8 +113,7 @@ CREATE TABLE IF NOT EXISTS `jddatabase`.`store` (
   CONSTRAINT `fk_store_user1`
     FOREIGN KEY (`user_user_id`)
     REFERENCES `jddatabase`.`user` (`user_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+   ON DELETE CASCADE ON UPDATE CASCADE)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = latin1;
 
@@ -149,13 +147,11 @@ CREATE TABLE IF NOT EXISTS `jddatabase`.`advertise_info` (
   CONSTRAINT `fk_advertise_info_store1`
     FOREIGN KEY (`store_store_id`)
     REFERENCES `jddatabase`.`store` (`store_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+   ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `fk_advertise_info_advertise1`
     FOREIGN KEY (`advertise_ad_id`)
     REFERENCES `jddatabase`.`advertise` (`ad_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+   ON DELETE CASCADE ON UPDATE CASCADE)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = latin1;
 
@@ -187,8 +183,7 @@ CREATE TABLE IF NOT EXISTS `jddatabase`.`attr_value` (
   CONSTRAINT `fk_attr_value_attr1`
     FOREIGN KEY (`attr_attr_id`)
     REFERENCES `jddatabase`.`attr` (`attr_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+   ON DELETE CASCADE ON UPDATE CASCADE)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = latin1;
 
@@ -246,8 +241,7 @@ CREATE TABLE IF NOT EXISTS `jddatabase`.`coupon_use_range` (
   CONSTRAINT `fk_coupon_use_range_coupon1`
     FOREIGN KEY (`coupon_coupon_id`)
     REFERENCES `jddatabase`.`coupon` (`coupon_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE ON UPDATE CASCADE)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = latin1;
 
@@ -267,8 +261,7 @@ CREATE TABLE IF NOT EXISTS `jddatabase`.`pay_channel` (
   CONSTRAINT `fk_pay_channel_user1`
     FOREIGN KEY (`user_user_id`)
     REFERENCES `jddatabase`.`user` (`user_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE ON UPDATE CASCADE)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = latin1;
 
@@ -304,18 +297,15 @@ CREATE TABLE IF NOT EXISTS `jddatabase`.`order` (
   CONSTRAINT `fk_order_pay_channel1`
     FOREIGN KEY (`pay_channel_pay_channel_id`)
     REFERENCES `jddatabase`.`pay_channel` (`pay_channel_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+   ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `fk_order_user1`
     FOREIGN KEY (`user_user_id`)
     REFERENCES `jddatabase`.`user` (`user_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `fk_order_addr1`
     FOREIGN KEY (`addr_addr_id`)
     REFERENCES `jddatabase`.`addr` (`addr_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE ON UPDATE CASCADE)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = latin1;
 
@@ -341,8 +331,7 @@ CREATE TABLE IF NOT EXISTS `jddatabase`.`return_addr` (
   CONSTRAINT `fk_return_addr_store1`
     FOREIGN KEY (`store_store_id`)
     REFERENCES `jddatabase`.`store` (`store_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE ON UPDATE CASCADE)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = latin1;
 
@@ -371,13 +360,11 @@ CREATE TABLE IF NOT EXISTS `jddatabase`.`return` (
   CONSTRAINT `fk_return_order1`
     FOREIGN KEY (`order_order_id`)
     REFERENCES `jddatabase`.`order` (`order_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `fk_return_user1`
     FOREIGN KEY (`user_user_id`)
     REFERENCES `jddatabase`.`user` (`user_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE ON UPDATE CASCADE)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = latin1;
 
@@ -398,8 +385,7 @@ CREATE TABLE IF NOT EXISTS `jddatabase`.`shopping_cart` (
   CONSTRAINT `fk_shopping_cart_user1`
     FOREIGN KEY (`user_user_id`)
     REFERENCES `jddatabase`.`user` (`user_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE ON UPDATE CASCADE)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = latin1;
 
@@ -436,18 +422,15 @@ CREATE TABLE IF NOT EXISTS `jddatabase`.`spu` (
   CONSTRAINT `fk_spu_store1`
     FOREIGN KEY (`store_store_id`)
     REFERENCES `jddatabase`.`store` (`store_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `fk_spu_brand1`
     FOREIGN KEY (`brand_brand_id`)
     REFERENCES `jddatabase`.`brand` (`brand_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `fk_spu_spu_type1`
     FOREIGN KEY (`spu_type_spu_type_id`)
     REFERENCES `jddatabase`.`spu_type` (`spu_type_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE ON UPDATE CASCADE)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = latin1;
 
@@ -466,8 +449,7 @@ CREATE TABLE IF NOT EXISTS `jddatabase`.`sku` (
   CONSTRAINT `fk_sku_spu1`
     FOREIGN KEY (`spu_spu_id`)
     REFERENCES `jddatabase`.`spu` (`spu_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE ON UPDATE CASCADE)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = latin1;
 
@@ -499,8 +481,7 @@ CREATE TABLE IF NOT EXISTS `jddatabase`.`spec` (
   CONSTRAINT `fk_spec_spec_group1`
     FOREIGN KEY (`spec_group_spec_group_id`)
     REFERENCES `jddatabase`.`spec_group` (`spec_group_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE ON UPDATE CASCADE)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = latin1;
 
@@ -529,8 +510,7 @@ CREATE TABLE IF NOT EXISTS `jddatabase`.`user_info` (
   CONSTRAINT `fk_user_info_user1`
     FOREIGN KEY (`user_user_id`)
     REFERENCES `jddatabase`.`user` (`user_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE ON UPDATE CASCADE)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = latin1;
 
@@ -550,8 +530,7 @@ CREATE TABLE IF NOT EXISTS `jddatabase`.`user_login_open` (
   CONSTRAINT `fk_user_login_open_user1`
     FOREIGN KEY (`user_user_id`)
     REFERENCES `jddatabase`.`user` (`user_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE ON UPDATE CASCADE)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = latin1;
 
@@ -570,13 +549,11 @@ CREATE TABLE IF NOT EXISTS `jddatabase`.`spu_has_spec` (
   CONSTRAINT `fk_spu_has_spec_spu1`
     FOREIGN KEY (`spu_spu_id`)
     REFERENCES `jddatabase`.`spu` (`spu_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `fk_spu_has_spec_spec1`
     FOREIGN KEY (`spec_spec_id`)
     REFERENCES `jddatabase`.`spec` (`spec_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE ON UPDATE CASCADE)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = latin1;
 
@@ -596,13 +573,11 @@ CREATE TABLE IF NOT EXISTS `jddatabase`.`sku_has_order` (
   CONSTRAINT `fk_sku_has_order_sku1`
     FOREIGN KEY (`sku_sku_id`)
     REFERENCES `jddatabase`.`sku` (`sku_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `fk_sku_has_order_order1`
     FOREIGN KEY (`order_order_id`)
     REFERENCES `jddatabase`.`order` (`order_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE ON UPDATE CASCADE)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = latin1;
 
@@ -621,13 +596,11 @@ CREATE TABLE IF NOT EXISTS `jddatabase`.`spu_type_has_spec_group` (
   CONSTRAINT `fk_spu_type_has_spec_group_spu_type1`
     FOREIGN KEY (`spu_type_spu_type_id`)
     REFERENCES `jddatabase`.`spu_type` (`spu_type_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `fk_spu_type_has_spec_group_spec_group1`
     FOREIGN KEY (`spec_group_spec_group_id`)
     REFERENCES `jddatabase`.`spec_group` (`spec_group_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE ON UPDATE CASCADE)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = latin1;
 
@@ -646,13 +619,11 @@ CREATE TABLE IF NOT EXISTS `jddatabase`.`spu_type_has_store_info` (
   CONSTRAINT `fk_spu_type_has_store_info_spu_type1`
     FOREIGN KEY (`spu_type_spu_type_id`)
     REFERENCES `jddatabase`.`spu_type` (`spu_type_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `fk_spu_type_has_store_info_store_info1`
     FOREIGN KEY (`store_info_store_id`)
     REFERENCES `jddatabase`.`store` (`store_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE ON UPDATE CASCADE)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = latin1;
 
@@ -671,13 +642,11 @@ CREATE TABLE IF NOT EXISTS `jddatabase`.`sku_has_return` (
   CONSTRAINT `fk_sku_has_return_sku1`
     FOREIGN KEY (`sku_sku_id`)
     REFERENCES `jddatabase`.`sku` (`sku_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `fk_sku_has_return_return1`
     FOREIGN KEY (`return_return_id`)
     REFERENCES `jddatabase`.`return` (`return_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE ON UPDATE CASCADE)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = latin1;
 
@@ -696,13 +665,11 @@ CREATE TABLE IF NOT EXISTS `jddatabase`.`attr_value_has_sku` (
   CONSTRAINT `fk_attr_value_has_sku_attr_value1`
     FOREIGN KEY (`attr_value_attr_value_id`)
     REFERENCES `jddatabase`.`attr_value` (`attr_value_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `fk_attr_value_has_sku_sku1`
     FOREIGN KEY (`sku_sku_id`)
     REFERENCES `jddatabase`.`sku` (`sku_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE ON UPDATE CASCADE)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = latin1;
 
@@ -721,13 +688,11 @@ CREATE TABLE IF NOT EXISTS `jddatabase`.`spec_has_sku` (
   CONSTRAINT `fk_spec_has_sku_spec1`
     FOREIGN KEY (`spec_spec_id`)
     REFERENCES `jddatabase`.`spec` (`spec_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `fk_spec_has_sku_sku1`
     FOREIGN KEY (`sku_sku_id`)
     REFERENCES `jddatabase`.`sku` (`sku_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE ON UPDATE CASCADE)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = latin1;
 
@@ -746,13 +711,11 @@ CREATE TABLE IF NOT EXISTS `jddatabase`.`order_has_coupon` (
   CONSTRAINT `fk_order_has_coupon_order1`
     FOREIGN KEY (`order_order_id`)
     REFERENCES `jddatabase`.`order` (`order_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `fk_order_has_coupon_coupon1`
     FOREIGN KEY (`coupon_coupon_id`)
     REFERENCES `jddatabase`.`coupon` (`coupon_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE ON UPDATE CASCADE)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = latin1;
 
@@ -774,13 +737,11 @@ CREATE TABLE IF NOT EXISTS `jddatabase`.`coupon_has_user` (
   CONSTRAINT `fk_coupon_has_user_coupon1`
     FOREIGN KEY (`coupon_coupon_id`)
     REFERENCES `jddatabase`.`coupon` (`coupon_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `fk_coupon_has_user_user1`
     FOREIGN KEY (`user_user_id`)
     REFERENCES `jddatabase`.`user` (`user_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE ON UPDATE CASCADE)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = latin1;
 
@@ -799,13 +760,11 @@ CREATE TABLE IF NOT EXISTS `jddatabase`.`shopping_cart_has_sku` (
   CONSTRAINT `fk_shopping_cart_has_sku_shopping_cart1`
     FOREIGN KEY (`shopping_cart_shopping_cart_id`)
     REFERENCES `jddatabase`.`shopping_cart` (`shopping_cart_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `fk_shopping_cart_has_sku_sku1`
     FOREIGN KEY (`sku_sku_id`)
     REFERENCES `jddatabase`.`sku` (`sku_id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE ON UPDATE CASCADE)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = latin1;
 

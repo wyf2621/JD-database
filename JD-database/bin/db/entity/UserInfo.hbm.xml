@@ -29,11 +29,14 @@
         <property name="user_info_cost" type="float">
             <column name="USER_INFO_COST" />
         </property>
-        <property name="user_info_return_credit" type="java.lang.String">
+        <property name="user_info_return_credit" type="java.lang.Integer">
             <column name="user_info_return_credit" />
         </property>
         <property name="user_info_regist_time" type="java.lang.String">
             <column name="user_info_regist_time" />
+        </property>
+         <property name="user_info_login_time" type="java.lang.String">
+            <column name="user_info_login_time" />
         </property>
         <property name="user_info_login_count" type="int">
             <column name="user_info_login_count" />

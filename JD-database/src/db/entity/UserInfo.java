@@ -10,11 +10,20 @@ public class UserInfo {
 	private String user_info_face_url;
 	private String user_info_level;
 	private float user_info_cost;
-	private String user_info_return_credit;
+	private int user_info_return_credit;
 	private String user_info_regist_time;
 	private int user_info_login_count;
+	private String user_info_login_time;
 	private int user_user_id;
 	
+	public String getUser_info_login_time() {
+		return user_info_login_time;
+	}
+
+	public void setUser_info_login_time(String user_info_login_time) {
+		this.user_info_login_time = user_info_login_time;
+	}
+
 	public int getUser_info_id() {
 		return user_info_id;
 	}
@@ -79,11 +88,11 @@ public class UserInfo {
 		this.user_info_cost = user_info_cost;
 	}
 	
-	public String getUser_info_return_credit() {
+	public int getUser_info_return_credit() {
 		return user_info_return_credit;
 	}
 	
-	public void setUser_info_return_credit(String user_info_return_credit) {
+	public void setUser_info_return_credit(int user_info_return_credit) {
 		this.user_info_return_credit = user_info_return_credit;
 	}
 	

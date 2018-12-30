@@ -1,5 +1,7 @@
 package db.entity;
 
+import java.util.Set;
+
 public class User {
 
 	private int user_id;
@@ -8,7 +10,89 @@ public class User {
 	private String user_tel;
 	private String user_password;
 	private int user_status;
+	private Set<Addr> addrs;
+	private Set<CouponHasUser> coupon_has_users;
+	private Set<Order> orders;
+	private Set<PayChannel> pay_channels;
+	private Set<Return> returns;
+	private Set<ShoppingCart> shopping_carts;
+	private Set<Store> stores;
+	private Set<UserInfo> user_infos;
+	private Set<UserLoginOpen> user_login_opens;
 	
+	
+	public Set<Addr> getAddrs() {
+		return addrs;
+	}
+
+	public void setAddrs(Set<Addr> addrs) {
+		this.addrs = addrs;
+	}
+
+	public Set<CouponHasUser> getCoupon_has_users() {
+		return coupon_has_users;
+	}
+
+	public void setCoupon_has_users(Set<CouponHasUser> coupon_has_users) {
+		this.coupon_has_users = coupon_has_users;
+	}
+
+	public Set<Order> getOrders() {
+		return orders;
+	}
+
+	public void setOrders(Set<Order> orders) {
+		this.orders = orders;
+	}
+
+	public Set<PayChannel> getPay_channels() {
+		return pay_channels;
+	}
+
+	public void setPay_channels(Set<PayChannel> pay_channels) {
+		this.pay_channels = pay_channels;
+	}
+
+	public Set<Return> getReturns() {
+		return returns;
+	}
+
+	public void setReturns(Set<Return> returns) {
+		this.returns = returns;
+	}
+
+	public Set<ShoppingCart> getShopping_carts() {
+		return shopping_carts;
+	}
+
+	public void setShopping_carts(Set<ShoppingCart> shopping_carts) {
+		this.shopping_carts = shopping_carts;
+	}
+
+	public Set<Store> getStores() {
+		return stores;
+	}
+
+	public void setStores(Set<Store> stores) {
+		this.stores = stores;
+	}
+
+	public Set<UserInfo> getUser_infos() {
+		return user_infos;
+	}
+
+	public void setUser_infos(Set<UserInfo> user_infos) {
+		this.user_infos = user_infos;
+	}
+
+	public Set<UserLoginOpen> getUser_login_opens() {
+		return user_login_opens;
+	}
+
+	public void setUser_login_opens(Set<UserLoginOpen> user_login_opens) {
+		this.user_login_opens = user_login_opens;
+	}
+
 	public int getUser_id() {
 		return user_id;
 	}

@@ -8,11 +8,11 @@
             <column name="spec_group_id" />
             <generator class="assigned" />
         </id>
-        <list name="spec_group_name" inverse="false" table="spec_group" lazy="true">
+        <list name="spec_group_name" table="spec_group_name_table">
             <key>
                 <column name="spec_group_id" />
             </key>
-            <list-index></list-index>
+            <list-index column="list_order"></list-index>
             <element type="string">
                 <column name="spec_group_name" />
             </element>
