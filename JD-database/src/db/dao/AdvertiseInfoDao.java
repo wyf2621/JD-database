@@ -4,7 +4,7 @@ import java.util.List;
 
 import db.entity.AdvertiseInfo;
 
-public interface AdvertiseInfoDao {
+public interface AdvertiseInfoDao extends BaseDao{
 
 	public AdvertiseInfo findByID(int ad_info_id);
 	
