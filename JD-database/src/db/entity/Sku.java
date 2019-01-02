@@ -4,7 +4,7 @@ public class Sku {
 
 	private int sku_id;
 	private String sku_name;
-	private int sku_sku_id;
+	private int spu_spu_id;
 
 	public int getSku_id() {
 		return sku_id;
@@ -22,11 +22,11 @@ public class Sku {
 		this.sku_name = sku_name;
 	}
 	
-	public int getSku_sku_id() {
-		return sku_sku_id;
+	public int getSpu_spu_id() {
+		return spu_spu_id;
 	}
 	
-	public void setSku_sku_id(int sku_sku_id) {
-		this.sku_sku_id = sku_sku_id;
+	public void setSpu_spu_id(int spu_spu_id) {
+		this.spu_spu_id = spu_spu_id;
 	}
 }
