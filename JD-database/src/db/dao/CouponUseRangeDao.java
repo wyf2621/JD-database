@@ -4,7 +4,7 @@ import java.util.List;
 
 import db.entity.CouponUseRange;
 
-public interface CouponUseRangeDao {
+public interface CouponUseRangeDao extends BaseDao{
 
 	public CouponUseRange findByID(int coupon_use_range);
 	

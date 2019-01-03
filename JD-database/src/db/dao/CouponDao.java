@@ -4,7 +4,7 @@ import java.util.List;
 
 import db.entity.Coupon;
 
-public interface CouponDao {
+public interface CouponDao extends BaseDao{
 
 	public Coupon findByID(int coupon_id);
 	

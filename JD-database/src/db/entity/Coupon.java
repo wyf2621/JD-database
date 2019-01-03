@@ -5,6 +5,7 @@ public class Coupon {
 	private int coupon_id;
 	private String coupon_name;
 	private int coupon_how_many;
+	private int coupon_type;
 	private float coupon_lower_bound;
 	private float coupon_value;
 	private int coupon_cost_allocation;
@@ -128,5 +129,13 @@ public class Coupon {
 	
 	public void setCoupon_note(String coupon_note) {
 		this.coupon_note = coupon_note;
+	}
+
+	public int getCoupon_type() {
+		return coupon_type;
+	}
+
+	public void setCoupon_type(int coupon_type) {
+		this.coupon_type = coupon_type;
 	}
 }
