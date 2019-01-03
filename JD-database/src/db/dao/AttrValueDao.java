@@ -4,7 +4,7 @@ import java.util.List;
 
 import db.entity.AttrValue;
 
-public interface AttrValueDao {
+public interface AttrValueDao extends BaseDao{
 
 	public AttrValue findByID(int attr_value_id);
 	

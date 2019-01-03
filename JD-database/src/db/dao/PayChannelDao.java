@@ -4,7 +4,7 @@ import java.util.List;
 
 import db.entity.PayChannel;
 
-public interface PayChannelDao {
+public interface PayChannelDao extends BaseDao{
 
 	public List<PayChannel> findAll();
 	

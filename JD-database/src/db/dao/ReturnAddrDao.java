@@ -4,7 +4,7 @@ import java.util.List;
 
 import db.entity.ReturnAddr;
 
-public interface ReturnAddrDao {
+public interface ReturnAddrDao extends BaseDao{
 
 	public ReturnAddr findByID(int return_addr_id);
 	

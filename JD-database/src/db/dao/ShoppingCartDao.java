@@ -4,7 +4,7 @@ import java.util.List;
 
 import db.entity.ShoppingCart;
 
-public interface ShoppingCartDao {
+public interface ShoppingCartDao extends BaseDao{
 
 	public ShoppingCart findByID(int shoppingcart_id);
 	

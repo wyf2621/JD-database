@@ -49,7 +49,7 @@ public class AdvertiseDaoImpl extends BaseDaoImpl implements AdvertiseDao {
 	public List<Advertise> findByAdType(String ad_type) {
 		
 		Session session = getSession();
-		Query query = session.createQuery("from Advertise ad where ad.store_store_id=?");
+		Query query = session.createQuery("from Advertise ad where ad.ad_type=?");
 		query.setString(0, ad_type);
 		List<Advertise> list = query.list();
 		
