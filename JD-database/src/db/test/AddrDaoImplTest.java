@@ -63,7 +63,7 @@ public class AddrDaoImplTest {
 
 	@Test
 	public void testFindByUserID() {
-		/*System.out.println("通过查找用户ID输出所有地址信息");
+		System.out.println("通过查找用户ID输出所有地址信息");
 		AddrDao ad = new AddrDaoImpl();
 		int i=126;
 		List<Addr> addr = ad.findByUserID(i);
@@ -73,12 +73,12 @@ public class AddrDaoImplTest {
 							   a.getAddr_area()+" "+a.getAddr_city()+" "+a.getAddr_country()+" "+
 							   a.getAddr_detail()+" "+a.getAddr_province()+" "+a.getAddr_tel()+" ");
 		}
-		System.out.println("查找用户ID为"+i+" 的所有地址信息成功!");*/
+		System.out.println("查找用户ID为"+i+" 的所有地址信息成功!");
 	}
 
 	@Test
 	public void testSave() {
-		/*System.out.println("增加地址信息");
+		System.out.println("增加地址信息");
 		int i=13;
 		int j=19;
 		AddrDao dao = new AddrDaoImpl();
@@ -120,7 +120,7 @@ public class AddrDaoImplTest {
 			else {
 				System.out.println("增加地址ID为 "+i+" 和 "+j+" 的地址信息成功!");
 			}
-		}*/
+		}
 	}
 	
 	@Test
