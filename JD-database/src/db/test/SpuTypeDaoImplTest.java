@@ -14,7 +14,7 @@ import db.dao.AddrDaoImpl;
 import db.entity.Addr;
 import db.entity.Advertise;
 
-public class AddrDaoImplTest {
+public class SpuTypeDaoImplTest {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {

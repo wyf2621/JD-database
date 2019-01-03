@@ -93,30 +93,7 @@ public class PayChannelDaoImplTest {
 			}
 		}
 	}
-	
-	@Test
-	public void testUpdate() {
-		System.out.println("更新一行信息某列元素");
-		int i=13;
-		PayChannelDao dao=new PayChannelDaoImpl();
-		PayChannel coupon=dao.findByID(i);
-		//判断该ID是否存在
-		if(coupon==null) {
-			System.out.println("Find Error!");
-		}
-		else {
-			coupon.setPay_cahnnel_type(3);
-			dao.update(coupon);
-			//验证是否更新信息成功
-			PayChannel a = dao.findByID(i);
-			if(a.getPay_cahnnel_type()!=3) {
-				System.out.println("Update Error!");
-			}
-			System.out.println("更新成功!");
-		}
-		
-	}
-	
+
 	@Test
 	public void testDelete() {
 		System.out.println("删除一行指定ID信息");
@@ -137,6 +114,28 @@ public class PayChannelDaoImplTest {
 		}
 		else {
 			System.out.println("删除成功!");
+		}
+	}
+	
+	@Test
+	public void testUpdate() {
+		System.out.println("更新一行信息某列元素");
+		int i=13;
+		PayChannelDao dao=new PayChannelDaoImpl();
+		PayChannel coupon=dao.findByID(i);
+		//判断该ID是否存在
+		if(coupon==null) {
+			System.out.println("Find Error!");
+		}
+		else {
+			coupon.setPay_cahnnel_type(3);
+			dao.update(coupon);
+			//验证是否更新信息成功
+			PayChannel a = dao.findByID(i);
+			if(a.getPay_cahnnel_type()!=3) {
+				System.out.println("Update Error!");
+			}
+			System.out.println("更新成功!");
 		}
 	}
 }

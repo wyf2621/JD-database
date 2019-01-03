@@ -48,18 +48,6 @@ public class BrandDaoImplTest {
 	}
 
 	@Test
-	public void testFindAll() {
-		System.out.println("列出所有品牌信息");
-		BrandDao br = new BrandDaoImpl();
-		List<Brand> brand = br.findAll();
-		for(int i = 0; i < brand.size(); i++) {
-			Brand a = brand.get(i);
-			System.out.println(a.getBrand_id()+" "+a.getBrand_name()+" ");
-		}
-		System.out.println("列出所有品牌信息成功!");
-	}
-
-	@Test
 	public void testSave() {
 		System.out.println("增加品牌信息");
 		BrandDao dao = new BrandDaoImpl();
@@ -89,6 +77,18 @@ public class BrandDaoImplTest {
 				System.out.println("增加品牌ID为 "+i+" 和 "+j+" 的信息成功!");
 			}
 		}
+	}
+	
+	@Test
+	public void testFindAll() {
+		System.out.println("列出所有品牌信息");
+		BrandDao br = new BrandDaoImpl();
+		List<Brand> brand = br.findAll();
+		for(int i = 0; i < brand.size(); i++) {
+			Brand a = brand.get(i);
+			System.out.println(a.getBrand_id()+" "+a.getBrand_name()+" ");
+		}
+		System.out.println("列出所有品牌信息成功!");
 	}
 	
 	@Test

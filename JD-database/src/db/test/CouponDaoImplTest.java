@@ -48,22 +48,6 @@ public class CouponDaoImplTest {
 	}
 
 	@Test
-	public void testFindAll() {
-		System.out.println("列出所有信息");
-		CouponDao cp = new CouponDaoImpl();
-		List<Coupon> coupon = cp.findAll();
-		for(int i = 0; i < coupon.size(); i++) {
-			Coupon a = coupon.get(i);
-			System.out.println(a.getCoupon_id()+" "+a.getCoupon_name()+" "+a.getCoupon_how_many()+
-					" "+a.getCoupon_type()+" "+a.getCoupon_lower_bound()+" "+a.getCoupon_value()+
-					" "+a.getCoupon_cost_allocation()+" "+a.getCoupon_user_lever()+" "+a.getCoupon_user_range()+
-					" "+a.getCoupon_begin_time()+" "+a.getCoupon_end_time()+" "+a.getCoupon_status()+
-					" "+a.getCoupon_verifier()+" "+a.getCoupon_note()+" ");
-		}
-		System.out.println("列出所有信息成功!");
-	}
-
-	@Test
 	public void testSave() {
 		System.out.println("增加信息");
 		CouponDao dao = new CouponDaoImpl();
@@ -117,6 +101,22 @@ public class CouponDaoImplTest {
 				System.out.println("增加成功!");
 			}
 		}
+	}
+	
+	@Test
+	public void testFindAll() {
+		System.out.println("列出所有信息");
+		CouponDao cp = new CouponDaoImpl();
+		List<Coupon> coupon = cp.findAll();
+		for(int i = 0; i < coupon.size(); i++) {
+			Coupon a = coupon.get(i);
+			System.out.println(a.getCoupon_id()+" "+a.getCoupon_name()+" "+a.getCoupon_how_many()+
+					" "+a.getCoupon_type()+" "+a.getCoupon_lower_bound()+" "+a.getCoupon_value()+
+					" "+a.getCoupon_cost_allocation()+" "+a.getCoupon_user_lever()+" "+a.getCoupon_user_range()+
+					" "+a.getCoupon_begin_time()+" "+a.getCoupon_end_time()+" "+a.getCoupon_status()+
+					" "+a.getCoupon_verifier()+" "+a.getCoupon_note()+" ");
+		}
+		System.out.println("列出所有信息成功!");
 	}
 	
 	@Test

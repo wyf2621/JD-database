@@ -48,18 +48,6 @@ public class CouponUseRangeDaoImplTest {
 	}
 
 	@Test
-	public void testFindAll() {
-		System.out.println("列出所有信息");
-		CouponUseRangeDao cp = new CouponUseRangeDaoImpl();
-		List<CouponUseRange> coupon = cp.findAll();
-		for(int i = 0; i < coupon.size(); i++) {
-			CouponUseRange a = coupon.get(i);
-			System.out.println(a.getCoupon_coupon_id()+" "+a.getCoupon_use_range_id()+" "+a.getUse_range_id()+" ");
-		}
-		System.out.println("列出所有信息成功!");
-	}
-
-	@Test
 	public void testSave() {
 		System.out.println("增加信息");
 		CouponUseRangeDao dao = new CouponUseRangeDaoImpl();
@@ -91,6 +79,18 @@ public class CouponUseRangeDaoImplTest {
 				System.out.println("增加成功!");
 			}
 		}
+	}
+	
+	@Test
+	public void testFindAll() {
+		System.out.println("列出所有信息");
+		CouponUseRangeDao cp = new CouponUseRangeDaoImpl();
+		List<CouponUseRange> coupon = cp.findAll();
+		for(int i = 0; i < coupon.size(); i++) {
+			CouponUseRange a = coupon.get(i);
+			System.out.println(a.getCoupon_coupon_id()+" "+a.getCoupon_use_range_id()+" "+a.getUse_range_id()+" ");
+		}
+		System.out.println("列出所有信息成功!");
 	}
 	
 	@Test

@@ -15,7 +15,7 @@ import db.entity.Spu;
 
 
 
-public class SpuDaoImplTest {
+public class SpecGroupDaoImplTest {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {

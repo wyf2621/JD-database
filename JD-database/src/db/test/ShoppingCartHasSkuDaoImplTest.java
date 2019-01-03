@@ -15,7 +15,7 @@ import db.dao.ShoppingCartDao;
 import db.dao.ShoppingCartDaoImpl;
 import db.entity.ShoppingCart;
 
-public class ShoppingCartDaoImplTest {
+public class ShoppingCartHasSkuDaoImplTest {
 
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
