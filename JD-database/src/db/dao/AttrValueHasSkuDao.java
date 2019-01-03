@@ -4,7 +4,7 @@ import java.util.List;
 
 import db.entity.AttrValueHasSku;
 
-public interface AttrValueHasSkuDao {
+public interface AttrValueHasSkuDao extends BaseDao{
 
 	public AttrValueHasSku findByID(int attr_value_has_sku_id);
 	

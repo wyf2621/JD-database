@@ -4,7 +4,7 @@ import java.util.List;
 
 import db.entity.SkuHasOrder;
 
-public interface SkuHasOrderDao {
+public interface SkuHasOrderDao extends BaseDao{
 
 	public SkuHasOrder findByID(int sku_has_order_id);
 	

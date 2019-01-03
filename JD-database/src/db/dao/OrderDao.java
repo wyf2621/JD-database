@@ -4,7 +4,7 @@ import java.util.List;
 
 import db.entity.Order;
 
-public interface OrderDao {
+public interface OrderDao extends BaseDao{
 
 	public Order findByID(int order_id);
 	

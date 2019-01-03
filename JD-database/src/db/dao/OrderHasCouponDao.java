@@ -5,7 +5,7 @@ import java.util.List;
 
 import db.entity.OrderHasCoupon;
 
-public interface OrderHasCouponDao {
+public interface OrderHasCouponDao extends BaseDao{
 
 	public List<OrderHasCoupon> findAll();
 	

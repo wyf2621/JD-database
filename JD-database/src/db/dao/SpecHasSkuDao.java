@@ -1,26 +1,15 @@
 package db.dao;
 
-public class SpecHasSkuDao {
+import java.util.List;
 
-	private int spec_spec_id;
-	private int sku_sku_id;
+import db.entity.SpecHasSku;
+
+public interface SpecHasSkuDao extends BaseDao{
+
+	public SpecHasSku findByID(int spec_spec_id);
 	
-	public int getSpec_spec_id() {
-		return spec_spec_id;
-	}
+	public List<SpecHasSku> findBySkuID(int sku_sku_id);
 	
-	public void setSpec_spec_id(int spec_spec_id) {
-		this.spec_spec_id = spec_spec_id;
-	}
-	
-	public int getSku_sku_id() {
-		return sku_sku_id;
-	}
-	
-	public void setSku_sku_id(int sku_sku_id) {
-		this.sku_sku_id = sku_sku_id;
-	}
-	
-	
-	
+	public List<SpecHasSku> findAll();
+		
 }

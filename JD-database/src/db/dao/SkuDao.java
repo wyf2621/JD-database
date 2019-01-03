@@ -4,7 +4,7 @@ import java.util.List;
 
 import db.entity.Sku;
 
-public interface SkuDao {
+public interface SkuDao extends BaseDao{
 
 	public Sku findByID(int sku_id);
 	

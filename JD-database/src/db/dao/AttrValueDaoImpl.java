@@ -10,7 +10,7 @@ import org.hibernate.service.ServiceRegistry;
 
 import db.entity.AttrValue;
 
-public class AttValueDaoImpl extends BaseDaoImpl implements AttrValueDao{
+public class AttrValueDaoImpl extends BaseDaoImpl implements AttrValueDao{
 	
 	public static Session getSession() {
 		Configuration cfg = new Configuration().configure();		

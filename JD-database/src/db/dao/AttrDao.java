@@ -4,7 +4,7 @@ import java.util.List;
 
 import db.entity.Attr;
 
-public interface AttrDao {
+public interface AttrDao extends BaseDao{
 
 	public List<Attr> findAll();
 	
