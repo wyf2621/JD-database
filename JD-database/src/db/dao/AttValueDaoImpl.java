@@ -8,46 +8,51 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 
-import db.entity.Addr;
+import db.entity.AttrValue;
 
-public class AddrDaoImpl extends BaseDaoImpl implements AddrDao {
-
+public class AttValueDaoImpl extends BaseDaoImpl implements AttrValueDao{
+	
 	public static Session getSession() {
 		Configuration cfg = new Configuration().configure();		
 		ServiceRegistry sr = new StandardServiceRegistryBuilder().applySettings(cfg.getProperties()).build();  
 		return cfg.buildSessionFactory(new StandardServiceRegistryBuilder().applySettings(cfg.getProperties()).build()).openSession();
 	}
-	
+
 	@Override
-	public Addr findByID(int addr_id) {
+	public AttrValue findByID(int attr_value_id) {
 		
 		Session session = getSession();
-		Query query = session.createQuery("from Addr a where a.addr_id=?");
-		query.setInteger(0, addr_id);
-		List list = query.list();
+		Query query = session.createQuery("from AttrValue attrvalue where attrvalue.attr_value_id=?");
+		query.setInteger(0, attr_value_id);
+		List<AttrValue> list = query.list();
+		
 		session.beginTransaction().commit();
-		session.close();
-		return list.size()>0?(Addr)list.get(0):null;
+		session.clear();
+		
+		return list.size()>0?list.get(0):null;
 	}
 
 	@Override
-	public List<Addr> findAll() {
+	public List<AttrValue> findAll() {
 		
 		Session session = getSession();
-		Query query = session.createQuery("from Addr");
-		List list = (List<Addr>)query.list();
+		Query query = session.createQuery("from AttrValue");
+		
+		List<AttrValue> list = query.list();
 		session.beginTransaction().commit();
 		session.close();
+		
 		return list;
 	}
 
 	@Override
-	public List<Addr> findByUserID(int user_id) {
+	public List<AttrValue> findByAttrID(int attr_id) {
 		
 		Session session = getSession();
-		Query query = session.createQuery("from Addr a where a.user_user_id=?");
-		query.setInteger(0, user_id);
-		List list = (List<Addr>)query.list();
+		Query query = session.createQuery("from AttrValue attrvalue where attrvalue.attr_attr_id=?");
+		query.setInteger(0, attr_id);
+		
+		List<AttrValue> list = query.list();
 		session.beginTransaction().commit();
 		session.close();
 		return list;

@@ -8,9 +8,9 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 
-import db.entity.Addr;
+import db.entity.Attr;
 
-public class AddrDaoImpl extends BaseDaoImpl implements AddrDao {
+public class AttrDaoImpl extends BaseDaoImpl implements AttrDao{
 
 	public static Session getSession() {
 		Configuration cfg = new Configuration().configure();		
@@ -19,38 +19,29 @@ public class AddrDaoImpl extends BaseDaoImpl implements AddrDao {
 	}
 	
 	@Override
-	public Addr findByID(int addr_id) {
-		
+	public List<Attr> findAll() {
 		Session session = getSession();
-		Query query = session.createQuery("from Addr a where a.addr_id=?");
-		query.setInteger(0, addr_id);
-		List list = query.list();
-		session.beginTransaction().commit();
-		session.close();
-		return list.size()>0?(Addr)list.get(0):null;
-	}
-
-	@Override
-	public List<Addr> findAll() {
+		Query query = session.createQuery("from Attr");
 		
-		Session session = getSession();
-		Query query = session.createQuery("from Addr");
-		List list = (List<Addr>)query.list();
+		List list = (List<Attr>)query.list();
 		session.beginTransaction().commit();
 		session.close();
 		return list;
 	}
 
 	@Override
-	public List<Addr> findByUserID(int user_id) {
+	public Attr findByID(int attr_id) {
 		
 		Session session = getSession();
-		Query query = session.createQuery("from Addr a where a.user_user_id=?");
-		query.setInteger(0, user_id);
-		List list = (List<Addr>)query.list();
+		Query query = session.createQuery("from Attr attr where attr.attr_id=?");
+		query.setInteger(0, attr_id);
+		List<Attr> list = query.list();
+		
 		session.beginTransaction().commit();
 		session.close();
-		return list;
+		
+		return list.size()>0?list.get(0):null;	
 	}
 
+	
 }

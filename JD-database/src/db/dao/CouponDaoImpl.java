@@ -8,49 +8,56 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
 
-import db.entity.Addr;
+import db.entity.Coupon;
 
-public class AddrDaoImpl extends BaseDaoImpl implements AddrDao {
+public class CouponDaoImpl extends BaseDaoImpl implements CouponDao{
 
 	public static Session getSession() {
 		Configuration cfg = new Configuration().configure();		
 		ServiceRegistry sr = new StandardServiceRegistryBuilder().applySettings(cfg.getProperties()).build();  
 		return cfg.buildSessionFactory(new StandardServiceRegistryBuilder().applySettings(cfg.getProperties()).build()).openSession();
 	}
-	
+
 	@Override
-	public Addr findByID(int addr_id) {
+	public Coupon findByID(int coupon_id) {
 		
-		Session session = getSession();
-		Query query = session.createQuery("from Addr a where a.addr_id=?");
-		query.setInteger(0, addr_id);
-		List list = query.list();
+		Session  session = getSession();
+		Query query = session.createQuery("from Coupon c where c.coupon_id=?");
+		query.setInteger(0, coupon_id);
+		
+		List<Coupon> list = query.list();
 		session.beginTransaction().commit();
 		session.close();
-		return list.size()>0?(Addr)list.get(0):null;
+		
+		return list.size()>0?list.get(0):null;
 	}
 
 	@Override
-	public List<Addr> findAll() {
+	public List<Coupon> findAll() {
 		
 		Session session = getSession();
-		Query query = session.createQuery("from Addr");
-		List list = (List<Addr>)query.list();
+		Query query = session.createQuery("from Coupon");
+		List<Coupon> list = query.list();
+		
 		session.beginTransaction().commit();
 		session.close();
+		
 		return list;
 	}
 
 	@Override
-	public List<Addr> findByUserID(int user_id) {
+	public List<Coupon> findByUserType(String user_lever) {
 		
 		Session session = getSession();
-		Query query = session.createQuery("from Addr a where a.user_user_id=?");
-		query.setInteger(0, user_id);
-		List list = (List<Addr>)query.list();
+		Query query = session.createQuery("from Coupon c where c.coupon_user_lever");
+		query.setString(0, user_lever);
+		
+		List<Coupon> list = query.list();
+		
 		session.beginTransaction().commit();
 		session.close();
+		
 		return list;
+		
 	}
-
 }

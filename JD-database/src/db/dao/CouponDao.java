@@ -6,10 +6,10 @@ import db.entity.Coupon;
 
 public interface CouponDao {
 
-	public Coupon findByID();
+	public Coupon findByID(int coupon_id);
 	
 	public List<Coupon> findAll();
 	
-	public List<Coupon> findByUserType(String user_type);
+	public List<Coupon> findByUserType(String user_lever);
 
 }

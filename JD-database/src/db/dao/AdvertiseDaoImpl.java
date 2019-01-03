@@ -9,6 +9,7 @@ import org.hibernate.cfg.Configuration;
 import org.hibernate.hql.internal.QueryExecutionRequestException;
 import org.hibernate.service.ServiceRegistry;
 
+import db.entity.Addr;
 import db.entity.Advertise;
 
 public class AdvertiseDaoImpl extends BaseDaoImpl implements AdvertiseDao {
@@ -38,8 +39,10 @@ public class AdvertiseDaoImpl extends BaseDaoImpl implements AdvertiseDao {
 		
 		Session session = getSession();
 		Query query = session.createQuery("from Advertise");
-		
-		return (List<Advertise>)query.list();
+		List list = (List<Advertise>)query.list();
+		session.beginTransaction().commit();
+		session.close();
+		return list;
 	}
 
 	@Override
