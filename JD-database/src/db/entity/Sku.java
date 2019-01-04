@@ -5,6 +5,8 @@ public class Sku {
 	private int sku_id;
 	private String sku_name;
 	private int spu_spu_id;
+	private float sku_price;
+	private int sku_store;
 
 	public int getSku_id() {
 		return sku_id;
@@ -28,5 +30,21 @@ public class Sku {
 	
 	public void setSpu_spu_id(int spu_spu_id) {
 		this.spu_spu_id = spu_spu_id;
+	}
+
+	public float getSku_price() {
+		return sku_price;
+	}
+
+	public void setSku_price(float sku_price) {
+		this.sku_price = sku_price;
+	}
+
+	public int getSku_store() {
+		return sku_store;
+	}
+
+	public void setSku_store(int sku_store) {
+		this.sku_store = sku_store;
 	}
 }

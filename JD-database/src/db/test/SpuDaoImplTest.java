@@ -33,17 +33,19 @@ public class SpuDaoImplTest {
 	public void testGetSession() {
 		
 	}
-
+	
 	@Test
-	public void testFindAll() {
-		System.out.println("列出所有信息");
-		SpuDao cp = new SpuDaoImpl();
-		List<Spu> coupon = cp.findAll();
-		for(int i = 0; i < coupon.size(); i++) {
-			Spu a = coupon.get(i);
-			System.out.println(a.getSpu_id()+" "+a.getSpu_name()+" "+a.getSpu_type_spu_type_id()+" "+a.getBrand_brand_id()+" "+a.getStore_store_id());
+	public void testFindByID() {
+		System.out.println("通过ID输出一行信息");
+		SpuDao dao = new SpuDaoImpl();
+		int i=13;
+		Spu a = dao.findByID(i);
+		if(a == null) {
+			System.out.println("没有ID为 "+i+" 的信息");
 		}
-		System.out.println("列出所有信息成功!");
+		else {
+			System.out.println("查找ID为"+a.getSpu_id()+" 的一行信息成功!");}
+	
 	}
 
 	@Test
@@ -72,19 +74,17 @@ public class SpuDaoImplTest {
 		System.out.println("查找Store ID为"+i+" 的所有信息成功!");
 	
 	}
-
-	@Test
-	public void testFindByID() {
-		System.out.println("通过ID输出一行信息");
-		SpuDao dao = new SpuDaoImpl();
-		int i=13;
-		Spu a = dao.findByID(i);
-		if(a == null) {
-			System.out.println("没有ID为 "+i+" 的信息");
-		}
-		else {
-			System.out.println("查找ID为"+a.getSpu_id()+" 的一行信息成功!");}
 	
+	@Test
+	public void testFindAll() {
+		System.out.println("列出所有信息");
+		SpuDao cp = new SpuDaoImpl();
+		List<Spu> coupon = cp.findAll();
+		for(int i = 0; i < coupon.size(); i++) {
+			Spu a = coupon.get(i);
+			System.out.println(a.getSpu_id()+" "+a.getSpu_name()+" "+a.getSpu_type_spu_type_id()+" "+a.getBrand_brand_id()+" "+a.getStore_store_id());
+		}
+		System.out.println("列出所有信息成功!");
 	}
 
 	@Test
