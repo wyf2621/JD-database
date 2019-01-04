@@ -7,6 +7,7 @@ public class Sku {
 	private int spu_spu_id;
 	private float sku_price;
 	private int sku_store;
+	private int spec_spec_id;
 
 	public int getSku_id() {
 		return sku_id;
@@ -46,5 +47,13 @@ public class Sku {
 
 	public void setSku_store(int sku_store) {
 		this.sku_store = sku_store;
+	}
+
+	public int getSpec_spec_id() {
+		return spec_spec_id;
+	}
+
+	public void setSpec_spec_id(int spec_spec_id) {
+		this.spec_spec_id = spec_spec_id;
 	}
 }

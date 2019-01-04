@@ -5,7 +5,7 @@ public class Return {
 	private int return_id;
 	private int return_no;
 	private String return_delivery_no;
-	private int return_amout;
+	private int return_amount;
 	private int return_status;
 	private String return_apply_time;
 	private String return_start_time;
@@ -39,12 +39,12 @@ public class Return {
 		this.return_delivery_no = return_delivery_no;
 	}
 	
-	public int getReturn_amout() {
-		return return_amout;
+	public int getReturn_amount() {
+		return return_amount;
 	}
 	
-	public void setReturn_amout(int return_amout) {
-		this.return_amout = return_amout;
+	public void setReturn_amount(int return_amount) {
+		this.return_amount = return_amount;
 	}
 	
 	public int getReturn_status() {

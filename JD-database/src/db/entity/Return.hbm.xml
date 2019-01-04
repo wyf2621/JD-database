@@ -3,7 +3,7 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 2018-12-29 21:51:10 by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping>
-    <class name="db.entity.Return" table="return">
+    <class name="db.entity.Return" table="[return]">
         <id name="return_id" type="int">
             <column name="return_id" />
             <generator class="assigned" />
@@ -14,8 +14,8 @@
         <property name="return_delivery_no" type="java.lang.String">
             <column name="return_delivery_no" />
         </property>
-        <property name="return_amout" type="int">
-            <column name="return_amout" />
+        <property name="return_amount" type="int">
+            <column name="return_amount" />
         </property>
         <property name="return_status" type="int">
             <column name="return_status" />

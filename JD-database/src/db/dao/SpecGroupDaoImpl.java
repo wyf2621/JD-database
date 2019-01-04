@@ -22,7 +22,7 @@ public class SpecGroupDaoImpl extends BaseDaoImpl implements SpecGroupDao{
 	public SpecGroup findByID(int spec_group_id) {
 		
 		Session session = getSession();
-		Query  query = session.createQuery("from SpecGrroup s where s.spec_group_id=?");
+		Query  query = session.createQuery("from SpecGroup s where s.spec_group_id=?");
 		query.setInteger(0, spec_group_id);
 		
 		List<SpecGroup> list = query.list();

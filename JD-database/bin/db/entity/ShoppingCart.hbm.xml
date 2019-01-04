@@ -4,12 +4,12 @@
 <!-- Generated 2018-12-29 21:51:10 by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping>
     <class name="db.entity.ShoppingCart" table="shopping_cart">
-        <id name="user_user_id" type="int">
-            <column name="user_user_id" />
+        <id name="shopping_cart_id" type="int">
+            <column name="shopping_cart_id" />
             <generator class="assigned" />
         </id>
-        <property name="shopping_cart_id" type="int">
-            <column name="shopping_cart_id" />
+        <property name="user_user_id" type="int">
+            <column name="user_user_id" />
         </property>
         <property name="shopping_cart_sku_num" type="int">
             <column name="shopping_cart_sku_num" />

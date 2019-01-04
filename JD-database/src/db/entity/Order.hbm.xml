@@ -3,7 +3,7 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 2018-12-29 21:51:10 by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping>
-    <class name="db.entity.Order" table="order">
+    <class name="db.entity.Order" table="[order]">
         <id name="order_id" type="int">
             <column name="order_id" />
             <generator class="assigned" />

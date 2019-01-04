@@ -10,5 +10,5 @@ public interface PayChannelDao extends BaseDao{
 	
 	public PayChannel findByID(int pay_channel_id);
 	
-	public List<PayChannel> findByUserID(int user_id);
+	public List<PayChannel> findByUserID(int user_user_id);
 }

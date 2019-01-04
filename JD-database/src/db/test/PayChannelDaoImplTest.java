@@ -29,11 +29,6 @@ public class PayChannelDaoImplTest {
 	}
 
 	@Test
-	public void testGetSession() {
-		
-	}
-
-	@Test
 	public void testFindByID() {
 		System.out.println("通过ID输出一行信息");
 		PayChannelDao dao = new PayChannelDaoImpl();
@@ -43,7 +38,7 @@ public class PayChannelDaoImplTest {
 			System.out.println("没有ID为 "+i+" 的信息");
 		}
 		else {
-			System.out.println("查找ID为"+a.getPay_cahnnel_id()+" 的一行信息成功!");}
+			System.out.println("查找ID为"+a.getPay_channel_id()+" 的一行信息成功!");}
 	}
 
 	@Test
@@ -53,11 +48,24 @@ public class PayChannelDaoImplTest {
 		List<PayChannel> coupon = cp.findAll();
 		for(int i = 0; i < coupon.size(); i++) {
 			PayChannel a = coupon.get(i);
-			System.out.println(a.getPay_cahnnel_id()+" "+a.getPay_cahnnel_type()+" "+a.getPay_cahnnel_type_no()+" "+a.getUser_user_id()+" ");
+			System.out.println(a.getPay_channel_id()+" "+a.getPay_channel_type()+" "+a.getPay_channel_type_no()+" "+a.getUser_user_id()+" ");
 		}
 		System.out.println("列出所有信息成功!");
 	}
 
+	@Test
+	public void testFindByUserID() {
+		System.out.println("通过查找用户ID输出所有信息");
+		PayChannelDao ad = new PayChannelDaoImpl();
+		int i=1;
+		List<PayChannel> addr = ad.findByUserID(i);
+		for(int j = 0; j < addr.size(); j++) {
+			PayChannel a = addr.get(j);
+			System.out.println(a.getPay_channel_id()+" "+a.getPay_channel_type()+" "+a.getPay_channel_type_no()+" "+a.getUser_user_id()+" ");
+		}
+		System.out.println("查找用户ID为"+i+" 的所有信息成功!");
+	}
+	
 	@Test
 	public void testSave() {
 		System.out.println("增加信息");
@@ -72,14 +80,14 @@ public class PayChannelDaoImplTest {
 		}
 		else {
 			PayChannel coupon = new PayChannel();
-			coupon.setPay_cahnnel_id(i);
-			coupon.setPay_cahnnel_type(1);
-			coupon.setPay_cahnnel_type_no("2");
+			coupon.setPay_channel_id(i);
+			coupon.setPay_channel_type(0);
+			coupon.setPay_channel_type_no("1234");
 			coupon.setUser_user_id(1);
 			dao.save(coupon);
-			coupon.setPay_cahnnel_id(j);
-			coupon.setPay_cahnnel_type(1);
-			coupon.setPay_cahnnel_type_no("2");
+			coupon.setPay_channel_id(j);
+			coupon.setPay_channel_type(0);
+			coupon.setPay_channel_type_no("1234");
 			coupon.setUser_user_id(1);
 			dao.save(coupon);
 			//验证是否增加信息成功
@@ -128,11 +136,11 @@ public class PayChannelDaoImplTest {
 			System.out.println("Find Error!");
 		}
 		else {
-			coupon.setPay_cahnnel_type(3);
+			coupon.setPay_channel_type(2);
 			dao.update(coupon);
 			//验证是否更新信息成功
 			PayChannel a = dao.findByID(i);
-			if(a.getPay_cahnnel_type()!=3) {
+			if(a.getPay_channel_type()!=2) {
 				System.out.println("Update Error!");
 			}
 			System.out.println("更新成功!");

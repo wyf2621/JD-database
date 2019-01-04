@@ -29,11 +29,6 @@ public class SpecDaoImplTest {
 	}
 
 	@Test
-	public void testGetSession() {
-		
-	}
-
-	@Test
 	public void testFindByID() {
 		System.out.println("通过ID输出一行信息");
 		SpecDao dao = new SpecDaoImpl();
@@ -87,11 +82,11 @@ public class SpecDaoImplTest {
 		else {
 			Spec x = new Spec();
 			x.setSpec_id(i);
-			//x.setSpec_name();
+			x.setSpec_name("name");
 			x.setSpec_group_spec_group_id(1);
 			dao.save(x);
-			x.setSpec_id(i);
-			//x.setSpec_name();
+			x.setSpec_id(j);
+			x.setSpec_name("name");
 			x.setSpec_group_spec_group_id(1);
 			dao.save(x);
 			//验证是否增加信息成功

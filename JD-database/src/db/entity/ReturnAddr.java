@@ -7,6 +7,15 @@ public class ReturnAddr {
 	private String return_addr_city;
 	private String return_addr_area;
 	private String return_addr_detail;
+	private String return_addr_province;
+	public String getReturn_addr_province() {
+		return return_addr_province;
+	}
+
+	public void setReturn_addr_province(String return_addr_province) {
+		this.return_addr_province = return_addr_province;
+	}
+
 	private boolean return_addr_is_default;
 	private String return_addr_name;
 	private String return_addr_tel;

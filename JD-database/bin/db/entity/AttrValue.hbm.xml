@@ -4,12 +4,12 @@
 <!-- Generated 2018-12-29 21:51:10 by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping>
     <class name="db.entity.AttrValue" table="attr_value">
-        <id name="attr_attr_id" type="int">
-            <column name="attr_attr_id" />
+        <id name="attr_value_id" type="int">
+            <column name="attr_value_id" />
             <generator class="assigned" />
         </id>
-        <property name="attr_value_id" type="int">
-            <column name="attr_value_id" />
+        <property name="attr_attr_id" type="int">
+            <column name="attr_attr_id" />
         </property>
         <property name="attr_value_name" type="java.lang.String">
             <column name="attr_value_name" />

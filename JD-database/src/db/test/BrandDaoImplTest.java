@@ -29,11 +29,7 @@ public class BrandDaoImplTest {
 	public void setUp() throws Exception {
 	}
 
-	@Test
-	public void testGetSession() {
-		
-	}
-
+	
 	@Test
 	public void testFindByID() {
 		System.out.println("通过品牌ID输出一行信息");

@@ -28,12 +28,7 @@ public class ShoppingCartDaoImplTest {
 	@Before
 	public void setUp() throws Exception {
 	}
-
-	@Test
-	public void testGetSession() {
-		
-	}
-
+	
 	@Test
 	public void testFindByID() {
 		System.out.println("通过ID输出一行信息");
@@ -115,28 +110,6 @@ public class ShoppingCartDaoImplTest {
 
 	@Test
 	public void testDelete() {
-		System.out.println("更新一行信息某列元素");
-		int i=13;
-		ShoppingCartDao dao = new ShoppingCartDaoImpl();
-		ShoppingCart coupon=dao.findByID(i);
-		//判断该ID是否存在
-		if(coupon==null) {
-			System.out.println("Find Error!");
-		}
-		else {
-			coupon.setShopping_cart_is_exist(false);
-			dao.update(coupon);
-			//验证是否更新信息成功
-			ShoppingCart a = dao.findByID(i);
-			if(a.isShopping_cart_is_exist()==false) {
-				System.out.println("Update Error!");
-			}
-			System.out.println("更新成功!");
-		}
-	}
-
-	@Test
-	public void testUpdate() {
 		System.out.println("删除一行指定ID信息");
 		int i=19;
 		ShoppingCartDao dao = new ShoppingCartDaoImpl();
@@ -155,6 +128,28 @@ public class ShoppingCartDaoImplTest {
 		}
 		else {
 			System.out.println("删除成功!");
+		}
+	}
+
+	@Test
+	public void testUpdate() {
+		System.out.println("更新一行信息某列元素");
+		int i=13;
+		ShoppingCartDao dao = new ShoppingCartDaoImpl();
+		ShoppingCart coupon=dao.findByID(i);
+		//判断该ID是否存在
+		if(coupon==null) {
+			System.out.println("Find Error!");
+		}
+		else {
+			coupon.setShopping_cart_sku_num(10);
+			dao.update(coupon);
+			//验证是否更新信息成功
+			ShoppingCart a = dao.findByID(i);
+			if(a.getShopping_cart_sku_num()!=10) {
+				System.out.println("Update Error!");
+			}
+			System.out.println("更新成功!");
 		}
 	}
 

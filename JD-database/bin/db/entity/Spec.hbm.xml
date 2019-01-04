@@ -8,15 +8,9 @@
             <column name="spec_id" />
             <generator class="assigned" />
         </id>
-        <list name="spec_name" table="spec_name_table">
-            <key>
-                <column name="spec_id" />
-            </key>
-            <list-index column="list_order"></list-index>
-            <element type="string">
-                <column name="spec_name_name" />
-            </element>
-        </list>
+         <property name="spec_name" type="java.lang.String">
+            <column name="spec_name" />
+        </property>
         <property name="spec_group_spec_group_id" type="int">
             <column name="spec_group_spec_group_id" />
         </property>

@@ -29,11 +29,6 @@ public class SpecGroupDaoImplTest {
 	}
 
 	@Test
-	public void testGetSession() {
-		
-	}
-
-	@Test
 	public void testFindByID() {
 		System.out.println("通过ID输出一行信息");
 		SpecGroupDao dao = new SpecGroupDaoImpl();
@@ -74,10 +69,10 @@ public class SpecGroupDaoImplTest {
 		else {
 			SpecGroup x = new SpecGroup();
 			x.setSpec_group_id(i);
-			//x.setSpec_group_name();
+			x.setSpec_group_name("name");
 			dao.save(x);
-			x.setSpec_group_id(i);
-			//x.setSpec_group_name();
+			x.setSpec_group_id(j);
+			x.setSpec_group_name("name");
 			dao.save(x);
 			//验证是否增加信息成功
 			SpecGroup a = dao.findByID(i);
@@ -93,7 +88,7 @@ public class SpecGroupDaoImplTest {
 
 	@Test
 	public void testDelete() {
-		/*System.out.println("更新一行信息某列元素");
+		System.out.println("更新一行信息某列元素");
 		int i=13;
 		SpecGroupDao dao = new SpecGroupDaoImpl();
 		SpecGroup coupon=dao.findByID(i);
@@ -110,7 +105,7 @@ public class SpecGroupDaoImplTest {
 				System.out.println("Update Error!");
 			}
 			System.out.println("更新成功!");
-		}*/
+		}
 	}
 
 	@Test

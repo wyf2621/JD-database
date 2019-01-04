@@ -14,6 +14,9 @@
         <property name="return_addr_city" type="java.lang.String">
             <column name="return_addr_city" />
         </property>
+         <property name="return_addr_province" type="java.lang.String">
+            <column name="return_addr_province" />
+        </property>
         <property name="return_addr_area" type="java.lang.String">
             <column name="return_addr_area" />
         </property>

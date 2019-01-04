@@ -57,6 +57,17 @@ public class SpuDaoImpl extends BaseDaoImpl  implements SpuDao{
 	}
 
 	@Override
+	public List<Spu> findBySpuTypeID(int spu_type_spu_type_id){
+		Session session = getSession();
+		Query query = session.createQuery("from Spu s where s.spu_type_spu_type_id=?");
+		query.setInteger(0, spu_type_spu_type_id);
+		
+		List<Spu> list = query.list();
+		session.beginTransaction().commit();
+		session.close();
+		return list;
+	}
+	@Override
 	public Spu findByID(int spu_id) {
 		
 		Session session = getSession();

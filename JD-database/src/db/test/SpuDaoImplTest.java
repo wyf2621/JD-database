@@ -28,11 +28,6 @@ public class SpuDaoImplTest {
 	@Before
 	public void setUp() throws Exception {
 	}
-
-	@Test
-	public void testGetSession() {
-		
-	}
 	
 	@Test
 	public void testFindByID() {
@@ -52,7 +47,7 @@ public class SpuDaoImplTest {
 	public void testFindByBrandID() {
 		System.out.println("通过查找Brand ID输出所有信息");
 		SpuDao ad = new SpuDaoImpl();
-		int i=126;
+		int i=1;
 		List<Spu> addr = ad.findByBrandID(i);
 		for(int j = 0; j < addr.size(); j++) {
 			Spu a = addr.get(j);
@@ -65,13 +60,27 @@ public class SpuDaoImplTest {
 	public void testFindByStoreID() {
 		System.out.println("通过查找Store ID输出所有信息");
 		SpuDao ad = new SpuDaoImpl();
-		int i=126;
+		int i=1;
 		List<Spu> addr = ad.findByStoreID(i);
 		for(int j = 0; j < addr.size(); j++) {
 			Spu a = addr.get(j);
 			System.out.println(a.getSpu_id()+" "+a.getSpu_name()+" "+a.getSpu_type_spu_type_id()+" "+a.getBrand_brand_id()+" "+a.getStore_store_id());
 		}
 		System.out.println("查找Store ID为"+i+" 的所有信息成功!");
+	
+	}
+	
+	@Test
+	public void testFindBySpuTypeID() {
+		System.out.println("通过查找SpuType ID输出所有信息");
+		SpuDao ad = new SpuDaoImpl();
+		int i=1;
+		List<Spu> addr = ad.findBySpuTypeID(i);
+		for(int j = 0; j < addr.size(); j++) {
+			Spu a = addr.get(j);
+			System.out.println(a.getSpu_id()+" "+a.getSpu_name()+" "+a.getSpu_type_spu_type_id()+" "+a.getBrand_brand_id()+" "+a.getStore_store_id());
+		}
+		System.out.println("查找SpuType ID为"+i+" 的所有信息成功!");
 	
 	}
 	
@@ -103,15 +112,15 @@ public class SpuDaoImplTest {
 			Spu coupon = new Spu();
 			coupon.setSpu_id(i);
 			coupon.setSpu_name("name");
-			coupon.setBrand_brand_id(12);
-			coupon.setSpu_type_spu_type_id(3);
-			coupon.setStore_store_id(3);
+			coupon.setBrand_brand_id(1);
+			coupon.setSpu_type_spu_type_id(1);
+			coupon.setStore_store_id(1);
 			dao.save(coupon);
 			coupon.setSpu_id(j);
 			coupon.setSpu_name("name");
-			coupon.setBrand_brand_id(12);
-			coupon.setSpu_type_spu_type_id(3);
-			coupon.setStore_store_id(3);
+			coupon.setBrand_brand_id(1);
+			coupon.setSpu_type_spu_type_id(1);
+			coupon.setStore_store_id(1);
 			dao.save(coupon);
 			//验证是否增加信息成功
 			Spu a = dao.findByID(i);

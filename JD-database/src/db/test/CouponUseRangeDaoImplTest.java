@@ -30,11 +30,6 @@ public class CouponUseRangeDaoImplTest {
 	}
 
 	@Test
-	public void testGetSession() {
-		
-	}
-
-	@Test
 	public void testFindByID() {
 		System.out.println("通过ID输出一行信息");
 		CouponUseRangeDao dao = new CouponUseRangeDaoImpl();
@@ -66,7 +61,7 @@ public class CouponUseRangeDaoImplTest {
 			coupon.setUse_range_id(2);
 			dao.save(coupon);
 			coupon.setCoupon_coupon_id(1);
-			coupon.setCoupon_use_range_id(i);
+			coupon.setCoupon_use_range_id(j);
 			coupon.setUse_range_id(2);
 			dao.save(coupon);
 			//验证是否增加信息成功

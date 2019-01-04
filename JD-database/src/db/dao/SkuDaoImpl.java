@@ -57,4 +57,17 @@ public class SkuDaoImpl extends BaseDaoImpl implements SkuDao{
 		return list;
 	}
 	
+	@Override
+	public List<Sku> findBySpecID(int spec_id) {
+		
+		Session session = getSession();
+		Query query = session.createQuery("from Sku s where s.spec_spec_id=?");
+		query.setInteger(0, spec_id);
+		
+		List<Sku> list = query.list();
+		session.beginTransaction().commit();
+		session.close();
+		return list;
+	}
+	
 }

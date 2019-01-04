@@ -86,13 +86,15 @@ public class SkuDaoImplTest {
 			x.setSku_name("111");
 			x.setSku_price(1);
 			x.setSku_store(21);
-			x.setSpu_spu_id(21);
+			x.setSpu_spu_id(1);
+			x.setSpec_spec_id(1);
 			dao.save(x);
-			x.setSku_id(i);
+			x.setSku_id(j);
 			x.setSku_name("111");
 			x.setSku_price(1);
 			x.setSku_store(21);
-			x.setSpu_spu_id(21);
+			x.setSpu_spu_id(1);
+			x.setSpec_spec_id(1);
 			dao.save(x);
 			//验证是否增加信息成功
 			Sku a = dao.findByID(i);

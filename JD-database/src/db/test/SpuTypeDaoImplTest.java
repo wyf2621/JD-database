@@ -27,11 +27,6 @@ public class SpuTypeDaoImplTest {
 	@Before
 	public void setUp() throws Exception {
 	}
-
-	@Test
-	public void testGetSession() {
-		
-	}
 	
 	@Test
 	public void testFindByID() {
@@ -51,7 +46,7 @@ public class SpuTypeDaoImplTest {
 	public void testfindByFatherID() {
 		System.out.println("通过查找Father ID输出所有信息");
 		SpuTypeDao ad = new SpuTypeDaoImpl();
-		int i=126;
+		int i=1;
 		List<SpuType> addr = ad.findByFatherID(i);
 		for(int j = 0; j < addr.size(); j++) {
 			SpuType a = addr.get(j);
@@ -88,11 +83,11 @@ public class SpuTypeDaoImplTest {
 			SpuType x = new SpuType();
 			x.setSpu_type_id(i);
 			x.setSpu_type_name("name");
-			x.setSpu_type_father_id(19);
+			x.setSpu_type_father_id(1);
 			dao.save(x);
-			x.setSpu_type_id(i);
+			x.setSpu_type_id(j);
 			x.setSpu_type_name("name");
-			x.setSpu_type_father_id(19);
+			x.setSpu_type_father_id(1);
 			dao.save(x);
 			//验证是否增加信息成功
 			SpuType a = dao.findByID(i);

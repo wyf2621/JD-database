@@ -12,5 +12,7 @@ public interface SpuDao extends BaseDao{
 	
 	public List<Spu> findByBrandID(int brand_brand_id);
 	
+	public List<Spu> findBySpuTypeID(int spu_type_spu_type_id);
+	
 	public Spu findByID(int spu_id);
 }

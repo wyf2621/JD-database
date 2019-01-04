@@ -30,11 +30,6 @@ public class CouponDaoImplTest {
 	}
 
 	@Test
-	public void testGetSession() {
-		
-	}
-
-	@Test
 	public void testFindByID() {
 		System.out.println("通过ID输出一行信息");
 		CouponDao dao = new CouponDaoImpl();
@@ -75,8 +70,9 @@ public class CouponDaoImplTest {
 			coupon.setCoupon_user_range(2);
 			coupon.setCoupon_value(21);
 			coupon.setCoupon_verifier("as");
+			coupon.setCoupon_status(1);
 			dao.save(coupon);
-			coupon.setCoupon_id(i);
+			coupon.setCoupon_id(j);
 			coupon.setCoupon_begin_time("2008-08-11 12:21:12");
 			coupon.setCoupon_cost_allocation(123);
 			coupon.setCoupon_end_time("2019-09-11 12:00:00");
@@ -90,6 +86,7 @@ public class CouponDaoImplTest {
 			coupon.setCoupon_user_range(2);
 			coupon.setCoupon_value(21);
 			coupon.setCoupon_verifier("as");
+			coupon.setCoupon_status(1);
 			dao.save(coupon);
 			//验证是否增加信息成功
 			Coupon a = dao.findByID(i);

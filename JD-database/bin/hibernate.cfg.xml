@@ -5,14 +5,14 @@
 <hibernate-configuration>
     <session-factory>
         <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-		  <property name="hibernate.connection.password">666666</property>
+		  <property name="hibernate.connection.password">123456</property>
 		  <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/jddatabase?useUnicode=true&amp;characterEncoding=utf8&amp;serverTimezone=GMT%2B8&amp;useSSL=false</property>
 		  <property name="hibernate.connection.username">root</property>
 		  <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
 		  <property name="connection.characterEncoding">UTF-8</property>
 		  <property name="hibernate.show_sql">true</property>
 		  <property name="hibernate.format_sql">true</property>
-		  
+		  <property name="hibernate.hbm2ddl.auto">update</property>
 		<mapping resource="db/entity/Addr.hbm.xml"/>
 	    <mapping resource="db/entity/Advertise.hbm.xml"/>
 	    <mapping resource="db/entity/AdvertiseInfo.hbm.xml"/>
@@ -28,15 +28,14 @@
 	    <mapping resource="db/entity/PayChannel.hbm.xml"/>
 	    <mapping resource="db/entity/Return.hbm.xml"/>
 	    <mapping resource="db/entity/ReturnAddr.hbm.xml"/>
+	    <mapping resource="db/entity/ShoppingCart.hbm.xml"/>
 	    <mapping resource="db/entity/ShoppingCartHasSku.hbm.xml"/>
 	    <mapping resource="db/entity/Sku.hbm.xml"/>
 	    <mapping resource="db/entity/SkuHasOrder.hbm.xml"/>
 	    <mapping resource="db/entity/SkuHasReturn.hbm.xml"/>
 	    <mapping resource="db/entity/Spec.hbm.xml"/>
 	    <mapping resource="db/entity/SpecGroup.hbm.xml"/>
-	    <mapping resource="db/entity/SpecHasSku.hbm.xml"/>
 	    <mapping resource="db/entity/Spu.hbm.xml"/>
-	    <mapping resource="db/entity/SpuHasSpec.hbm.xml"/>
 	    <mapping resource="db/entity/SpuType.hbm.xml"/>   
 	    <mapping resource="db/entity/SpuTypeHasSpecGroup.hbm.xml"/>
 	    <mapping resource="db/entity/SpuTypeHasStoreInfo.hbm.xml"/>

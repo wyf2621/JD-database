@@ -34,7 +34,7 @@ public class PayChannelDaoImpl extends BaseDaoImpl implements PayChannelDao{
 	public PayChannel findByID(int pay_channel_id) {
 		
 		Session session = getSession();;
-		Query query = session.createQuery("from PayChannel p where p.pay_cahnnel_id=?");
+		Query query = session.createQuery("from PayChannel p where p.pay_channel_id=?");
 		query.setInteger(0, pay_channel_id);
 		
 		List<PayChannel> list = query.list();
@@ -44,11 +44,11 @@ public class PayChannelDaoImpl extends BaseDaoImpl implements PayChannelDao{
 	}
 
 	@Override
-	public List<PayChannel> findByUserID(int user_id) {
+	public List<PayChannel> findByUserID(int user_user_id) {
 		
 		Session session = getSession();
 		Query query = session.createQuery("from PayChannel p where p.user_user_id=?");
-		query.setInteger(0, user_id);
+		query.setInteger(0, user_user_id);
 		
 		List<PayChannel> list = query.list();
 		session.beginTransaction().commit();

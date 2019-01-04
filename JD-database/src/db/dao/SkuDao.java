@@ -11,4 +11,6 @@ public interface SkuDao extends BaseDao{
 	public List<Sku> findAll();
 	
 	public List<Sku> findBySpuID(int spu_id);
+	
+	public List<Sku> findBySpecID(int spec_id);
 }

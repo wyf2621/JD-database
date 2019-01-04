@@ -22,7 +22,7 @@ public class ShoppingCartDaoImpl extends BaseDaoImpl implements ShoppingCartDao{
 	public ShoppingCart findByID(int shoppingcart_id) {
 		
 		Session session = getSession();
-		Query query = session.createQuery("form ShoppingCart s where s.shopping_cart_id=?");
+		Query query = session.createQuery("from ShoppingCart s where s.shopping_cart_id=?");
 		query.setInteger(0, shoppingcart_id);
 		
 		List<ShoppingCart> list = query.list();
